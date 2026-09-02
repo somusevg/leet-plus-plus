@@ -36,15 +36,6 @@ ships a redesign, this is the first thing to fix. Check the browser
 console for `[LCX]` log lines; a `could not find insertion point`
 warning means the selectors need updating.
 
-## Refreshing the dataset later
-
-The source repo updates periodically. To regenerate:
-
-```bash
-git clone --depth 1 https://github.com/liquidslr/leetcode-company-wise-problems.git repo
-python3 build_data.py
-```
-
-This overwrites `extension/company-data.json`.
+DataSet will be updated periodically, keep updating company-data file accordingly. 
 
 ..vxy
