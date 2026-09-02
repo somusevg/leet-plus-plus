@@ -1,4 +1,4 @@
-# Leet++
+# leet++
 VIKAS SOMUSE
 
 Shows company tags + interview frequency (30d / 3mo / 6mo / >6mo / all-time)
