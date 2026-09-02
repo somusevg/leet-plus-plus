@@ -1,10 +1,8 @@
-# LeetCode Company Tags — Chrome Extension
+# Leet++
+VIKAS SOMUSE
 
 Shows company tags + interview frequency (30d / 3mo / 6mo / >6mo / all-time)
-on LeetCode problem pages, sourced from
-[liquidslr/leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems)
-(471 companies, 3,392 unique problems, snapshot as of repo clone date).
-
+on LeetCode problem pages, sourced from internet. 
 ## Load it (unpacked)
 
 1. Unzip this folder.
@@ -48,3 +46,5 @@ python3 build_data.py
 ```
 
 This overwrites `extension/company-data.json`.
+
+..vxy
