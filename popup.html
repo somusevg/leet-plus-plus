@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Leet++</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="lcx-popup">
+    <!-- COMPANY LIST VIEW -->
+    <section id="lcx-view-companies" class="lcx-view">
+      <header class="lcx-popup-header">
+        <img src="icon32.png" alt="Leet++" />
+        <h1>Leet++</h1>
+      </header>
+      <input
+        id="lcx-company-search"
+        class="lcx-search-input"
+        type="text"
+        placeholder="Search companies..."
+        autocomplete="off"
+      />
+      <div id="lcx-company-list" class="lcx-company-list">
+        <div class="lcx-loading">Loading dataset...</div>
+      </div>
+    </section>
+
+    <!-- COMPANY DETAIL VIEW -->
+    <section id="lcx-view-detail" class="lcx-view" hidden>
+      <header class="lcx-detail-header">
+        <button id="lcx-back-btn" class="lcx-back-btn">← Back</button>
+        <h2 id="lcx-company-name"></h2>
+      </header>
+
+      <div class="lcx-filters">
+        <select id="lcx-timeframe-select" class="lcx-select"></select>
+        <div id="lcx-difficulty-filter" class="lcx-difficulty-filter"></div>
+      </div>
+
+      <div id="lcx-topics-filter" class="lcx-topics-filter"></div>
+
+      <div id="lcx-problem-list" class="lcx-problem-list"></div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

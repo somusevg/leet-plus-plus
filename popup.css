@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #1c1c1e;
+  color: #eff2f6;
+}
+
+.lcx-popup {
+  width: 380px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.lcx-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.lcx-view[hidden] {
+  display: none;
+}
+
+/* ---------- Company list view ---------- */
+
+.lcx-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.lcx-popup-header img {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+.lcx-popup-header h1 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.lcx-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #2a2a2c;
+  border: 1px solid #3e3e40;
+  border-radius: 6px;
+  color: #eff2f6;
+  padding: 8px 10px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.lcx-company-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.lcx-company-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.lcx-company-row:hover {
+  background: #2a2a2c;
+}
+
+.lcx-company-row .lcx-count {
+  color: #9a9b9c;
+  font-size: 11.5px;
+}
+
+.lcx-loading,
+.lcx-empty-state {
+  color: #9a9b9c;
+  font-size: 12.5px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ---------- Detail view ---------- */
+
+.lcx-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.lcx-back-btn {
+  background: transparent;
+  border: none;
+  color: #9a9b9c;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 2px;
+}
+
+.lcx-back-btn:hover {
+  color: #ffa116;
+}
+
+.lcx-detail-header h2 {
+  font-size: 15px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lcx-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.lcx-select {
+  background: #2a2a2c;
+  border: 1px solid #3e3e40;
+  border-radius: 6px;
+  color: #eff2f6;
+  padding: 5px 6px;
+  font-size: 12px;
+}
+
+.lcx-difficulty-filter {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.lcx-diff-btn {
+  flex: 1;
+  background: #2a2a2c;
+  border: 1px solid #3e3e40;
+  border-radius: 6px;
+  color: #c7c7c9;
+  font-size: 11.5px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.lcx-diff-btn.active {
+  border-color: #ffa116;
+  color: #ffa116;
+}
+
+.lcx-topics-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.lcx-topic-chip {
+  background: #2a2a2c;
+  border: 1px solid #3e3e40;
+  border-radius: 12px;
+  color: #c7c7c9;
+  font-size: 10.5px;
+  padding: 3px 9px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lcx-topic-chip.active {
+  border-color: #ffa116;
+  color: #ffa116;
+  background: rgba(255, 161, 22, 0.1);
+}
+
+.lcx-problem-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lcx-problem-row {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #2f2f31;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.lcx-problem-row:hover {
+  border-color: #ffa116;
+}
+
+.lcx-problem-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.lcx-problem-title {
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lcx-problem-freq {
+  font-size: 11px;
+  color: #9a9b9c;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.lcx-diff-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.lcx-diff-badge.EASY {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.lcx-diff-badge.MEDIUM {
+  background: rgba(255, 161, 22, 0.15);
+  color: #ffa116;
+}
+
+.lcx-diff-badge.HARD {
+  background: rgba(255, 107, 107, 0.15);
+  color: #ff6b6b;
+}
+
+.lcx-problem-topics {
+  font-size: 10px;
+  color: #7d7d80;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Scrollbars */
+.lcx-company-list::-webkit-scrollbar,
+.lcx-problem-list::-webkit-scrollbar,
+.lcx-topics-filter::-webkit-scrollbar {
+  width: 6px;
+}
+.lcx-company-list::-webkit-scrollbar-thumb,
+.lcx-problem-list::-webkit-scrollbar-thumb,
+.lcx-topics-filter::-webkit-scrollbar-thumb {
+  background: #3e3e40;
+  border-radius: 3px;
+}
