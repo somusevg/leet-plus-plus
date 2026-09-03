@@ -1,9 +1,7 @@
 # LeetCode Company Tags — Chrome Extension
 
 Shows company tags + interview frequency (30d / 3mo / 6mo / >6mo / all-time)
-on LeetCode problem pages, sourced from
-[liquidslr/leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems)
-(471 companies, 3,392 unique problems, snapshot as of repo clone date).
+on LeetCode problem pages, sourced from internet. 
 
 ## Load it (unpacked)
 
@@ -40,23 +38,9 @@ warning means the selectors need updating.
 
 ## Usage analytics
 
-Anonymous usage tracking runs through Google Analytics 4 — no backend
-needed, already configured in `background.js` with your Measurement ID
-and API secret. It tells you daily/weekly active users and which
-problems get viewed, using a random per-install ID (never a name,
-email, or account).
+Anonymous usage tracking runs through Google Analytics 4
 
-**⚠️ Web Store listing note:** since this collects usage data, don't
-declare "no data collection" in the Chrome Web Store's Privacy
-Practices tab. Instead:
-- Check "Collects usage statistics" (or equivalent current wording).
-- Declare that you collect a randomly generated identifier + which
-  problem pages are viewed, purely for aggregate usage counts.
-- State clearly this data is **not** sold, **not** linked to identity,
-  and **not** used for anything beyond product analytics.
-- Add a short privacy policy page (even a single paragraph on a GitHub
-  Pages / Notion page works) and link it in the listing — required once
-  any data collection is declared.
+
 
 ## Welcome page
 
@@ -67,11 +51,5 @@ initial install (`chrome.runtime.onInstalled`, `reason === "install"`).
 
 ## Refreshing the dataset later
 
-The source repo updates periodically. To regenerate:
+Dataset will be refreshed periodically when new data is acquired and verified.
 
-```bash
-git clone --depth 1 https://github.com/liquidslr/leetcode-company-wise-problems.git repo
-python3 build_data.py
-```
-
-This overwrites `extension/company-data.json`.
