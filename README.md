@@ -62,4 +62,6 @@ initial install (`chrome.runtime.onInstalled`, `reason === "install"`).
 
 ## Refreshing the dataset later
 
-Dataset will be refreshed periodically when new data is acquired and verified.
+Dataset will be refreshed periodically when new data is acquired and verified.   
+
+..vxy
